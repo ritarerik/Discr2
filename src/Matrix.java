@@ -60,28 +60,25 @@ public class Matrix {
 	//---------------------------------------------------------//
 	public static boolean[][] getIncidenceMatrix(boolean A[][]) {
 		
-//		boolean B[][] = new boolean[A.length][A.length];
+		int num = 0; // число дуг
+		for (int i = 0; i < A.length; i++)
+			for (int j = 0; j < A[0].length; j++) 
+				if (A[i][j]) num++;
 		
-		ArrayList<boolean []> B = new ArrayList<>();
+		boolean B[][] = new boolean[A.length][num];
 		
 		int k = 0;
 		for (int i = 0; i < A.length; i++) {			
-			
-			
-			
-			for (int j = 0; j < A[0].length; j++) {
-//				B[k][i] = true;
-//				B[k][j] = true;
-				k++;
-			}
+			k = 0;
+			for (int j = 0; j < A[0].length; j++) 
+				if (A[i][j]) {
+					B[k][i] = true;
+					B[k][j] = true;
+					k++;
+				}
 		}
-		
-		boolean C[][] = new boolean[A.length][B.size()];
-		
-		for (int i = 0; i < B.size(); i++)
-			C[i] = B.get(i);
-		
-		return C;
+				
+		return B;
 		
 	}
 	
