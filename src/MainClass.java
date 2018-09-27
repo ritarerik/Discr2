@@ -32,7 +32,13 @@ public class MainClass {
 				System.out.println();
 				
 				System.out.println(">> ÌÀÒÐÈÖÀ ÑÌÅÆÍÎÑÒÈ >\n");
-				boolean A[][] = Matrix.createBOOLEAN(size);
+//				boolean A[][] = Matrix.createBOOLEAN(size);
+				boolean A[][] = {{true, false, false, false, true, false, false}, 
+								 {true, true, false, false, false, true, false}, 
+								 {false, true, true, false, false, false, false}, 
+								 {false, false, true, true, false, false, true}, 
+								 {false, false, false, true, true, true, false}, 
+								 {false, false, false, false, false, false, true}};
 		        Matrix.printBOOLEAN(A, 'x'); 
 		        System.out.println("\n");
 		        
@@ -41,10 +47,10 @@ public class MainClass {
 		        Matrix.printBOOLEAN(B, 'c'); 
 		        System.out.println("\n");
 		        
-		        System.out.println(">> ÒÅÎÐÅÒÈÊÎ-ÌÍÎÆÅÑÒÂÅÍÍÎÅ ÎÏÈÑÀÍÈÅ >\n");
-		        boolean Ñ[][] = Matrix.getDescription(B);		        
-		        Matrix.printBOOLEAN(Ñ, 'x'); 
-		        System.out.println("\n\n");			
+//		        System.out.println(">> ÒÅÎÐÅÒÈÊÎ-ÌÍÎÆÅÑÒÂÅÍÍÎÅ ÎÏÈÑÀÍÈÅ >\n");
+//		        boolean Ñ[][] = Matrix.getDescription(B);		        
+//		        Matrix.printBOOLEAN(Ñ, 'x'); 
+//		        System.out.println("\n\n");			
 			} 
 		}
 		

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Random;
 
 // создание матрицы с рандомными элементами 
@@ -21,23 +22,23 @@ public class Matrix {
 	public static void printBOOLEAN(boolean A[][], char c) {
 		
 		System.out.print("        |");
-		for (int i = 0; i < A.length; i++) {
+		for (int i = 0; i < A[0].length; i++) {
 			System.out.print(c + "(" + i + ") ");
 		}
 		System.out.println();
 		
 		System.out.print("        |ЧЧЧЧ");
-		for (int i = 0; i < A.length - 1; i++) {
+		for (int i = 0; i < A[0].length - 1; i++) {
 			System.out.print("ЧЧЧЧЧ");
 		}
 		System.out.println();
 
-		for (int i = 0; i < A.length; i ++) {
+		for (int i = 0; i < A.length; i++) {
 			System.out.print("   x(" + i + ") |");
-			for (int j = 0; j < A.length; j++) {				
+			for (int j = 0; j < A[0].length; j++) {				
 				if (A[i][j] == true) System.out.print("  " + 1 + " ");
 					else System.out.print("  " + 0 + " ");
-				if (j < A.length - 1) System.out.print(" ");	        				
+				if (j < A[0].length - 1) System.out.print(" ");	        				
 			}			
 			if (i < A.length - 1) System.out.print("\n");	        			
 		}		
@@ -59,11 +60,28 @@ public class Matrix {
 	//---------------------------------------------------------//
 	public static boolean[][] getIncidenceMatrix(boolean A[][]) {
 		
-		boolean B[][] = new boolean[A.length][A.length];
+//		boolean B[][] = new boolean[A.length][A.length];
 		
+		ArrayList<boolean []> B = new ArrayList<>();
 		
+		int k = 0;
+		for (int i = 0; i < A.length; i++) {			
+			
+			
+			
+			for (int j = 0; j < A[0].length; j++) {
+//				B[k][i] = true;
+//				B[k][j] = true;
+				k++;
+			}
+		}
 		
-		return B;
+		boolean C[][] = new boolean[A.length][B.size()];
+		
+		for (int i = 0; i < B.size(); i++)
+			C[i] = B.get(i);
+		
+		return C;
 		
 	}
 	
