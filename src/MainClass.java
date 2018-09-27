@@ -11,7 +11,7 @@ public class MainClass {
 		
 		while (!exit) {
 			
-			System.out.println("> Ðàçìåðíîñòü ìàòðèöû (4;8)");
+			System.out.println("> Ðàçìåðíîñòü ìàòðèöû >> (4;8)");
 			System.out.println("> Âûõîä >> 0");
 			System.out.print("\n  >> ");
 			
@@ -33,17 +33,17 @@ public class MainClass {
 				
 				System.out.println(">> ÌÀÒÐÈÖÀ ÑÌÅÆÍÎÑÒÈ >\n");
 				boolean A[][] = Matrix.createBOOLEAN(size);
-		        Matrix.printBOOLEAN(A); 
+		        Matrix.printBOOLEAN(A, 'x'); 
 		        System.out.println("\n");
 		        
 		        System.out.println(">> ÌÀÒÐÈÖÀ ÈÍÖÅÄÅÍÒÍÎÑÒÈ >\n");
 		        boolean B[][] = Matrix.getIncidenceMatrix(A);		        
-		        Matrix.printBOOLEAN(B); 
+		        Matrix.printBOOLEAN(B, 'c'); 
 		        System.out.println("\n");
 		        
 		        System.out.println(">> ÒÅÎÐÅÒÈÊÎ-ÌÍÎÆÅÑÒÂÅÍÍÎÅ ÎÏÈÑÀÍÈÅ >\n");
 		        boolean Ñ[][] = Matrix.getDescription(B);		        
-		        Matrix.printBOOLEAN(Ñ); 
+		        Matrix.printBOOLEAN(Ñ, 'x'); 
 		        System.out.println("\n\n");			
 			} 
 		}

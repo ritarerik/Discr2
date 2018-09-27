@@ -18,25 +18,25 @@ public class Matrix {
 		
 	}
 		
-	public static void printBOOLEAN(boolean A[][]) {
+	public static void printBOOLEAN(boolean A[][], char c) {
 		
 		System.out.print("        |");
 		for (int i = 0; i < A.length; i++) {
-			System.out.print("(" + i + ") ");
+			System.out.print(c + "(" + i + ") ");
 		}
 		System.out.println();
 		
-		System.out.print("        |———");
+		System.out.print("        |————");
 		for (int i = 0; i < A.length - 1; i++) {
-			System.out.print("————");
+			System.out.print("—————");
 		}
 		System.out.println();
 
 		for (int i = 0; i < A.length; i ++) {
 			System.out.print("   x(" + i + ") |");
 			for (int j = 0; j < A.length; j++) {				
-				if (A[i][j] == true) System.out.print(" " + 1 + " ");
-					else System.out.print(" " + 0 + " ");
+				if (A[i][j] == true) System.out.print("  " + 1 + " ");
+					else System.out.print("  " + 0 + " ");
 				if (j < A.length - 1) System.out.print(" ");	        				
 			}			
 			if (i < A.length - 1) System.out.print("\n");	        			
