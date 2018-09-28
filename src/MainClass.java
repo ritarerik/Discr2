@@ -32,25 +32,26 @@ public class MainClass {
 				System.out.println();
 				
 				System.out.println(">> ÌÀÒÐÈÖÀ ÑÌÅÆÍÎÑÒÈ >\n");
-//				boolean A[][] = Matrix.createBOOLEAN(size);
-				boolean A[][] = {{true, true, false, false, true, false}, 
-								 {true, false, true, false, true, false}, 
-								 {false, true, false, true, false, false}, 
-								 {false, false, true, false, true, true}, 
-								 {true, true, false, true, false, false}, 
-								 {false, false, false, true, false, false}};
-		        Matrix.printBOOLEAN(A, 'x'); 
+				boolean A[][] = Matrix.createBOOLEAN(size);
+//				boolean A[][] = {{false, true, true, false, true, false}, 
+//								 {false, true, false, false, true, false}, 
+//								 {false, false, false, false, false, false}, 
+//								 {false, false, true, false, false, false}, 
+//								 {false, false, false, true, false, false}, 
+//								 {true, false, false, false, true, true}};
+		        Matrix.printBOOLEAN(A, 'x', 'x'); 
 		        System.out.println("\n");
 		        
-		        System.out.println(">> ÌÀÒÐÈÖÀ ÈÍÖÅÄÅÍÒÍÎÑÒÈ >\n");
+		        System.out.println(">> ÌÀÒÐÈÖÀ ÈÍÖÈÄÅÍÖÈÉ >\n");
 		        boolean B[][] = Matrix.getIncidenceMatrix(A);		        
-		        Matrix.printBOOLEAN(B, 'c'); 
+		        Matrix.printBOOLEAN(B, 'c', 'x'); 
 		        System.out.println("\n");
 		        
-//		        System.out.println(">> ÒÅÎÐÅÒÈÊÎ-ÌÍÎÆÅÑÒÂÅÍÍÎÅ ÎÏÈÑÀÍÈÅ >\n");
-//		        boolean Ñ[][] = Matrix.getDescription(B);		        
-//		        Matrix.printBOOLEAN(Ñ, 'x'); 
-//		        System.out.println("\n\n");			
+		        System.out.println(">> ÒÅÎÐÅÒÈÊÎ-ÌÍÎÆÅÑÒÂÅÍÍÎÅ ÎÏÈÑÀÍÈÅ");
+		        System.out.println("   (îïèñàíèå êàæäîé äóãè ïàðîé âåðøèí) >\n");
+		        int Ñ[][] = Matrix.getDescription(B);		        
+		        Matrix.printDescription(Ñ); 
+		        System.out.println("\n\n");			
 			} 
 		}
 		

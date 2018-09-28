@@ -18,12 +18,13 @@ public class Matrix {
 		return A;
 		
 	}
-		
-	public static void printBOOLEAN(boolean A[][], char c) {
+	
+	//--------------------------------------------------------------//
+	public static void printBOOLEAN(boolean A[][], char c1, char c2) {
 		
 		System.out.print("        |");
 		for (int i = 0; i < A[0].length; i++) {
-			System.out.print(c + "(" + i + ") ");
+			System.out.print(c1 + "(" + i + ") ");
 		}
 		System.out.println();
 		
@@ -34,7 +35,7 @@ public class Matrix {
 		System.out.println();
 
 		for (int i = 0; i < A.length; i++) {
-			System.out.print("   x(" + i + ") |");
+			System.out.print("   " + c2 + "(" + i + ") |");
 			for (int j = 0; j < A[0].length; j++) {				
 				if (A[i][j] == true) System.out.print("  " + 1 + " ");
 					else System.out.print("  " + 0 + " ");
@@ -44,16 +45,10 @@ public class Matrix {
 		}		
 	}
 	
-	private static int[][] booleanToInt(boolean A[][]) {
+	public static void printDescription(int A[][]) {	  	
 		
-		int B[][] = new int[A.length][A.length];
-		
-		for (int i = 0; i < A.length; i++) 
-			for (int j = 0; j < A.length; j++) 
-				if (A[i][j]) B[i][j] = 1;
-				else B[i][j] = 0;
-		
-		return B;
+		for (int i = 0; i < A.length; i ++)  
+			System.out.println("        a(" + i + ") = {x(" + A[i][0] + "), x(" + A[i][1] + ")}");
 		
 	}
 	
@@ -68,24 +63,38 @@ public class Matrix {
 		boolean B[][] = new boolean[A.length][num];
 		
 		int k = 0;
-		for (int i = 0; i < A.length; i++) {			
-			k = 0;
+		for (int i = 0; i < A.length; i++) 			
 			for (int j = 0; j < A[0].length; j++) 
-				if (A[i][j]) {
-					B[k][i] = true;
-					B[k][j] = true;
+				if (A[i][j] && (i != j)) {
+					B[i][k] = true;
+					B[j][k] = true;
 					k++;
 				}
-		}
-				
+
 		return B;
 		
 	}
 	
-	public static boolean[][] getDescription(boolean A[][]) {
+	public static int[][] getDescription(boolean A[][]) { // A -- матрица инциденций
 		
-		boolean B[][] = new boolean[A.length][A.length];
+		int B[][] = new int[A[0].length][2];
 		
+		int k = 0;
+		boolean f = true;
+		
+		for (int i = 0; i < A[0].length; i++) 
+			for (int j = 0; j < A.length; j++) 
+				if (A[j][i]) {
+					
+					if (f) {
+						B[k][0] = j;						
+					} else {
+						B[k][1] = j;
+						k++;
+					}
+					
+					f = !f;					
+				}
 		
 		
 		return B;
