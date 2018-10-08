@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class MainClass {
 
@@ -33,12 +32,6 @@ public class MainClass {
 				
 				System.out.println(">> ÌÀÒÐÈÖÀ ÑÌÅÆÍÎÑÒÈ >\n");
 				boolean A[][] = Matrix.createBOOLEAN(size);
-//				boolean A[][] = {{false, true, true, false, true, false}, 
-//								 {false, true, false, false, true, false}, 
-//								 {false, false, false, false, false, false}, 
-//								 {false, false, true, false, false, false}, 
-//								 {false, false, false, true, false, false}, 
-//								 {true, false, false, false, true, true}};
 		        Matrix.printBOOLEAN(A, 'x', 'x'); 
 		        System.out.println("\n");
 		        
