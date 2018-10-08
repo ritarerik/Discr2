@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.Random;
-
 // создание матрицы с рандомными элементами 
 
 public class Matrix {
